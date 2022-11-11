@@ -4,16 +4,17 @@
 <b>Discipline | <b> Biotechnology and Biomedical engineering
 :--|:--|
 <b> Lab | <b> Bioinformatics and Computational Biology
-<b> Experiment|     <b> To analyze the sequence of a given DNA and find out sequence composition
+<b> Experiment|     <b> To find out the number of times a sequence is repeated in a given DNA sequence
 
 ### About the Experiment 
 
 The goal of proposed virtual laboratories is to achieve a conceptual understanding of standard protocols and tools in biotechnology and biomedical engineering at an advanced level that may be useful in interdisciplinary fields of science and technology.
   
 With this experiment, the user can
-  1. Learn to analyze the general compositional features of a given DNA sequence.
-  2. Quantitatively evaluate genome organization and biological functions of the genome in a broader sense
-  3. Apply  knowledge on sequence composition for molecular biology experiments 
+  1. Understand the basics of Repetitive DNA sequences and its importance in genetics and molecular biology.
+  2. Identify and calculate the number of repetitive DNA sequence in a DNA strand. 
+  3. Study restriction endonucleases, its cleavage sites and identifying how restriction endonucleases cleaves the DNA strands at recognition sites to form cohesive ends.
+
 
 
 
