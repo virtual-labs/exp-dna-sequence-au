@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1.Repetitive DNA sequences are",
+      "question": "Repetitive DNA sequences are",
 
       "answers": {
         "a": "Long repeats of nucleotide bases occur as single or multiple copies in genome",
@@ -69,20 +69,7 @@
   
   "correctAnswer": "b",
   "difficulty": "beginner"
-},
 
-
-{
-  "question": " 5'-CGATCG-3' is the recognition site of ",
-  "answers": {
-    "a": "BamHI",
-    "b": "HindIII",
-    "c": "PvuI",
-    "d": "EcoRI"
-  },
-  
-  "correctAnswer": "c",
-  "difficulty": "beginner"
 }
 
 

@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1.Repetitive DNA sequences are",
+      "question": "Repetitive DNA sequences are",
 
       "answers": {
         "a": "Long repeats of nucleotide bases occur as single or multiple copies in genome",
