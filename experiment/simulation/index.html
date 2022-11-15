@@ -182,13 +182,15 @@
 		 text-decoration-color:#4f2037;  
 		 position: relative;
          align-items: center;
-         margin-left: 10%;
+         text-align: center;
+         margin-left: 5%;
 	}
     </style>
 <head>
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 </head>
 <body>
@@ -205,7 +207,8 @@
 <br>
     <div id="testbutton" align="center">
         <input type="file" id="actual-btn" accept=".txt" hidden/>
-        <label for="actual-btn" style="cursor: pointer;">Select DNA sequence:</label><br><br>
+        <label for="actual-btn" style="cursor: pointer;">Select DNA sequence:</label> 
+        &nbsp;<i class="fa fa-hand-o-left" style="font-size:25px;color:#4f2037;"></i></i> Click here to choose a DNA FASTA file <br><br>
 
         <br>
         <textarea id="disp" cols="50" rows="10">
@@ -238,7 +241,8 @@
 		
  		let textarea = document.querySelector('textarea')
  		input.addEventListener('change', () => {
-    		let files = input.files;
+    		//once: true;
+            let files = input.files;
     		if (files.length == 0) return;
 			const file = files[0];
  
@@ -251,8 +255,10 @@
  			};
  			reader2.onerror = (e) => alert(e.target.error.name);
    	 		reader2.readAsText(file);
-            document.getElementById("wordcount").insertAdjacentHTML('beforeend', "<label >Select the word size:</label><br><br> <input type=\"radio\" id=\"mono\" name=\"required\" value=\"mono\"onclick=\"Wordcount()\">Mono-Nucleotide &nbsp;&nbsp;&nbsp;&nbsp;	<input type=\"radio\" id=\"di\" name=\"required\" value=\"di\"onclick=\"Wordcount()\">Di-Nucleotide &nbsp;&nbsp;&nbsp;&nbsp;<input type=\"radio\" id=\"tri\" name=\"required\" value=\"tri\"onclick=\"Wordcount()\">Tri-Nucleotide &nbsp;&nbsp;&nbsp;&nbsp; <input type=\"radio\" id=\"more\" name=\"required\" value=\"more\" onclick=\"Wordcount()\">More &nbsp;&nbsp;&nbsp;&nbsp;<br><br><div id=\"count\" style=\"display:none\"><label for=\"word_count\">Enter a word size:</label>&nbsp;&nbsp;&nbsp;<input type=\"text\" id=\"word_count\" /></div>");
-            document.getElementById("restriction").insertAdjacentHTML('beforeend', "<hr/><br><label for=\"restriction\">Restriction enzyme site:</label><br><br><input type=\"radio\" id=\"ecorI\" name=\"restriction\" value=\"ecorI\">EcoRI ('GAATTC') &nbsp;&nbsp;&nbsp;&nbsp;<input type=\"radio\" id=\"hindIII\" name=\"restriction\" value=\"hindIII\">Hind III ('AAGCTT') &nbsp;&nbsp;&nbsp;&nbsp;<input type=\"radio\" id=\"pvuI\" name=\"restriction\" value=\"pvuI\">PvuI ('CGATCG') &nbsp;&nbsp;&nbsp;&nbsp;	<input type=\"radio\" id=\"bamhI\" name=\"restriction\" value=\"bamhI\">BamHI ('GGATCC') &nbsp;&nbsp;&nbsp;&nbsp;<br><br><hr/><br><label id=\"ws\">Enter the word to search:</label><br><br><input type=\"text\" id=\"word_search\" <br><br><hr/><div id=\"button\"  onclick=\"myFunction()\" value=\"Submit\" ></div>");
+            document.getElementById("wordcount").insertAdjacentHTML('beforeend', "<label style=\"background-color: white ; color: #802652; font-weight: bold;\" >Select the word size:</label><br><br> <input type=\"radio\" id=\"mono\" name=\"required\" value=\"mono\"onclick=\"Wordcount()\">Mono-Nucleotide &nbsp;&nbsp;&nbsp;&nbsp;	<input type=\"radio\" id=\"di\" name=\"required\" value=\"di\"onclick=\"Wordcount()\">Di-Nucleotide &nbsp;&nbsp;&nbsp;&nbsp;<input type=\"radio\" id=\"tri\" name=\"required\" value=\"tri\"onclick=\"Wordcount()\">Tri-Nucleotide &nbsp;&nbsp;&nbsp;&nbsp; <input type=\"radio\" id=\"more\" name=\"required\" value=\"more\" onclick=\"Wordcount()\">More &nbsp;&nbsp;&nbsp;&nbsp;<br><br><div id=\"count\" style=\"display:none\"><label for=\"word_count\"style=\"background-color: white ; color: #802652; font-weight: bold;\">Enter a word size:</label>&nbsp;&nbsp;&nbsp;<input type=\"text\" id=\"word_count\" /></div>");
+            document.getElementById("restriction").insertAdjacentHTML('beforeend', "<hr/><br><label for=\"restriction1\" style=\"background-color: white ; color: #802652; font-weight: bold;\">Restriction enzyme site:</label><br><br><input type=\"radio\" id=\"ecorI\" name=\"restriction1\" value=\"ecorI\">EcoRI ('GAATTC') &nbsp;&nbsp;&nbsp;&nbsp;<input type=\"radio\" id=\"hindIII\" name=\"restriction1\" value=\"hindIII\">Hind III ('AAGCTT') &nbsp;&nbsp;&nbsp;&nbsp;<input type=\"radio\" id=\"pvuI\" name=\"restriction1\" value=\"pvuI\">PvuI ('CGATCG') &nbsp;&nbsp;&nbsp;&nbsp;	<input type=\"radio\" id=\"bamhI\" name=\"restriction1\" value=\"bamhI\">BamHI ('GGATCC') &nbsp;&nbsp;&nbsp;&nbsp;<br><br><hr/><br><label id=\"ws\"style=\"background-color: white ; color: #802652; font-weight: bold;\">Enter the word to search:</label><br><br><input type=\"text\" id=\"word_search\" <br><br><hr/><p><input type=\"button\"  onclick=\"myFunction()\" id=\"Submit\" value=\"Submit\" hidden> <label for=\"Submit\"> Submit</label> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href=\"index.html\"><input type=\"button\" id=\"Reset\" hidden><label for=\"Reset\">Reset</label></a></p>");
+            //input.removeEventListener("change");
+            document.getElementById("actual-btn").disabled = true;
 		});
 
         function Wordcount(){
@@ -315,7 +321,7 @@
                     }
                 });
                 var count_w=[];
-                document.getElementById("demo").insertAdjacentHTML('beforeend',"<textarea id=\"result1\"rows=\"10\"></textarea>");
+                document.getElementById("demo").insertAdjacentHTML('beforeend',"<textarea id=\"result1\"rows=\"10\"></textarea><br>");
                 for(var x=0;x<unique_word.length; x++){
                     if(unique_word[x].length == wc){
                         count_w[x] = NEW_DNA.match(new RegExp(unique_word[x],"g")).length;
@@ -324,7 +330,7 @@
                         
                 }
             }
-            
+
 
             //Restriction site
             var rest=[];
@@ -332,6 +338,7 @@
             var rest_count=[];
             var pattern=[];
             var enz=[];
+            if(document.querySelector('input[name="restriction1"]:checked')  ){
             if(document.getElementById("ecorI").checked){
                 
                 rest="GAATTC";
@@ -357,6 +364,7 @@
                 enz="BamHI"
             }
             else{
+                
                 rest="  "
             }		
 
@@ -376,16 +384,18 @@
             }                
             else{
 
-                    document.getElementById("demo").insertAdjacentHTML('beforeend',"<br"+"The Restriction site "+enz+" is not present in this sequence.<br");
+                    document.getElementById("demo").insertAdjacentHTML('beforeend',"<br> The Restriction site "+enz+" is not present in this sequence.<br><br><br>");
             }
-
+        }
 
             //Word Search
             var ws= document.getElementById("word_search").value;
+
+
             if(ws!=""){
 
 
-                if(ws)
+                if(newDNA.includes(ws))
                 {
                     
                     var col_change1= newDNA.replace(new RegExp(ws, "g"),"<mark>"+ws+"</mark>");
