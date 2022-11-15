@@ -42,12 +42,19 @@ Restriction endonucleases are enzymes produced by bacteria, which are sequence s
 2.	User can identify specific recognition sites of restriction endonucleases and its action computationally.
 
 
+&nbsp;
+
+
+&nbsp;
 
 ### Algorithm to develop a simulator which could find repetitive sequences
+&nbsp;
 
 **Step 1: Problem Definition:**
 
 To identify the repetitive sequences as well as the restriction sites and their occurances present in a given DNA. 
+
+&nbsp;
 
 
 **Step 2: Project Planning & System Definition:**
@@ -55,8 +62,9 @@ To identify the repetitive sequences as well as the restriction sites and their 
 The pedagogical features of this simulator are, the user can determine the presence of repeating DNA sequences in a DNA strand and compute their number, the action of restriction endonucleases and their specific recognition sites are computationally recognized by the user.
 
 
-**Step 3: Model Formulation:**
+&nbsp;
 
+**Step 3: Model Formulation:**
 
 1. Get a DNA sequence in FASTA format.
 
