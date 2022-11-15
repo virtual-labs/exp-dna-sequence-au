@@ -1,4 +1,3 @@
-### References
 
 1)	Benson, G. (1999). Tandem repeats finder: a program to analyze DNA sequences. Nucleic acids research, 27(2), 573-580.
 

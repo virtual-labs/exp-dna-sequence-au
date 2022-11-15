@@ -1,5 +1,3 @@
-### Procedure
-
 
 1.	User can either provide the DNA sequence in the given text box or download the given FASTA file. Save the file in Personal Computer and use the sequence for completing the experiment.
 
