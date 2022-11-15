@@ -1,5 +1,3 @@
-### Aim of the experiment
-
 &nbsp;
 
 •   To understand basics of Repetitive DNA sequences and its importance in genetics and molecular biology.
