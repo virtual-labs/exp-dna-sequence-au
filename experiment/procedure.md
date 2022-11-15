@@ -52,10 +52,12 @@
 
   •	If user selects EcoR1 as the restriction enzyme, specific enzyme site ‘ GAATTC’ in the sequence is identified and the user can calculate the number of restriction site by enzyme EcoR1. 
  
+ 
 
 <center><img src="images/11.png" title="" /></center>
  
 
+ 
   •	If user selects HindIII as the restriction enzyme, specific enzyme site ‘ AAGCTT’ in the sequence is identified and the user can calculate the number of restriction site by enzyme HindIII. 
 
 
@@ -82,12 +84,14 @@
 <center><img src="images/15.png" title="" /></center>
  
  
+ 
   If the short sequence is not present , a notification saying the word is not present is also displayed
  
 <center><img src="images/16.png" title="" /></center>
 
 
-•	The user can click on **Reset** button to reset the simulator window back to step 1.
+ 
+ •	The user can click on **Reset** button to reset the simulator window back to step 1.
 
 
  <center><img src="images/17.png" title="" /></center>
