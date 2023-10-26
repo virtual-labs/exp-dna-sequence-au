@@ -2,13 +2,14 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "Repetitive DNA sequences are",
+      "question": "Using the simulator, calculate number of GC in the given DNA sequence (Save the given sequence in your PC as .txt file) '>AB609589.1 Dengue virus 2 gene for polyprotein, partial cds, strain: New Guinea 
+CACAGCAGGGATACTGAAGAGATGGGGAACAATTAAAAAATCAAAAGCCATTAATGTTTTGAGAGGGTTCAAGAAAGAGATTGGAAGGATGCTGAACATCTTGAACAGGAGACGCAGAACTGCAGGCATGATCATTATGCTGATTCCAACAGTGATGGCGTTCCATTTAACCACACGTAACGGAGAACCACACATGATCGTCAGTAGACAAGAGAAAGGGAAAAGTCTTCTGTTTAAAACAGAGGATGGTGTGAACATGTGTACCCTCATGGCCATGGACC'",
 
       "answers": {
-        "a": "Long repeats of nucleotide bases occur as single or multiple copies in genome",
-        "b": "Short DNA fragments that occur as multiple copies in the genome.",
-        "c": "Short repeats of DNA fragments non-relavant to the genome.",
-        "d": "DNA sequences that are specific for prokaryotic organism"
+        "a": "15",
+        "b": "9",
+        "c": "23",
+        "d": "26"
       },
 
       "correctAnswer": "b",
