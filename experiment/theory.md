@@ -14,8 +14,21 @@ Repetitive DNA sequences are those DNA fragments that occur as multiple copies i
 
 Briefly, repetitive sequences are very short sequences usually present in greater than 105 to several copies per genome. These are noncoding (do not code for protein) DNA sequence (junk DNA) stretches that are located between the genes in intergenic regions and thought to have regulatory functions. These repeated sequences have different shapes and sizes with specific functions in gene evolution. Interspersed repeats are repeated sequences, where the copies are nonadjacent and dispersed throughout the genome. Such repeats are common in eukaryotic genomes usually expressed as short interspersed nuclear elements (SINEs), with 100 to 700 base pairs in length and long interspersed nuclear elements (LINEs), with 7,000bps in length.  Examples include DNA transposons and retrotransposons. Tandem repeats or nested repeats have copies of sequence that are repeated one after another along a chromosome and the repeats are seen adjacent to each other. It has just two copies or millions of copies ranging size from 1–2 bases (mono- and dinucleotide repeats) to millions of bases. One of the salient features of this short tandem repeats is higher variability in length of these sequences featured by the insertion and/or deletion of base units that may affect the replication and DNA repair process. 
 
+<center><img src="images/T1.jpg" title="" /></center>
+<center>Fig. 1. Repeated DNA sequences in eukaryotic genomes and its evolution
+Image source :https://www.researchgate.net/publication/23567269_Comparative_Genomics_and_Molecular_Dynamics_of_DNA_Repeats_in_Eukaryotes/figures?lo=1
+</center>
+
+
+
 An example for tandem repeat sequence is, TATATATA, where the base unit TA is repeated four times. Depending on the length of the repeated base units and array size, the tandem repeats of DNA are classified into several groups. Satellite DNA sequences are portion of DNA sequences that are tandemly-arrayed, non-coding nucleotides which are highly-repetitive with highly-conserved monomer sequences. The length of the monomer sequence is 150–400 base pairs (bp), fast-evolving and abundant in eukaryotic organisms with features specific to species or genome. It plays a major role in functioning of centromere and formation of heterochromatin. Microsatellites are tandem repeats containing 2 to 5 bp repeat s, that is short tandem repeats (STRs) or simple sequence repeats (SSRs) with array size in 10–100 units order and repeated about five to fifty times in a sequence. Repeating DNA sequences of length 10- to 100-bp and array size usually of 0.5–30 kb are known as minisatellites. Such DNA motifs repeats 5-50 times and occur at 1000+ locations in human genome with higher probability range for mutation and diversity in nuclear genome. Variable number tandem repeats (VNTRs) are tandem DNA repeats with 15 to 100 bp length. Another examples of tandem repeats are mononucleotide repeats (a single nucleotide), dinucleotide (two nucleotides), tri-, tetra-, and pentanucleotides (three, four and five nucleotides) which are STRs present at any site of the genome. These repetitive DNA sequences have wide range of applications in DNA fingerprinting. Conserving the repetitive DNA sequences due to its higher variability and identifying novel repetitive sequences still poses challenges in biological research.
 &nbsp;
+
+
+<center><img src="images/T2.png" title="" /></center>
+<center> Fig.2. Example of a repetitive DNA sequence in a genome. In tandem repeats the repetitive nucleotide sequence is adjacent to each other, forming an array. 
+Image source : https://pediaa.com/difference-between-repetitive-dna-and-satellite-dna/ </center>
+
 
 #### Restriction Endonucleases
 
