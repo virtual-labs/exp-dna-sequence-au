@@ -17,7 +17,7 @@ Briefly, repetitive sequences are very short sequences usually present in greate
 <center><img src="images/T1.jpg" title="" /></center>
 <center>Fig. 1. Repeated DNA sequences in eukaryotic genomes and its evolution
     
-Image source :https://www.researchgate.net/publication/23567269_Comparative_Genomics_and_Molecular_Dynamics_of_DNA_Repeats_in_Eukaryotes/figures?lo=1
+Image source: https://www.researchgate.net/publication/23567269_Comparative_Genomics_and_Molecular_Dynamics_of_DNA_Repeats_in_Eukaryotes/figures?lo=1
 <br>
 </center>
 
