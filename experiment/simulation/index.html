@@ -3,8 +3,9 @@
 	<style>
         	input[type=text], select {
   			width: 50%;
-  			padding: 5px 5px;
-  			margin: 8px 0;
+			font-size: 2vw;
+  			padding: 1% 1%;
+  			margin: 1% 0;
   			box-sizing: border-box;
 		}
 		div{
@@ -12,12 +13,12 @@
 			color: black;
             background-color: transparent;
             text-align: center;
-            margin-top: 1%;
+            margin-top: 1%; 
         }
         label {
             background-color: #802652;
             color: white;
-            padding: 10px;
+            padding: 1%;
             font-family: sans-serif;
             cursor: auto;
             margin-top: 200px;
@@ -37,23 +38,23 @@
         hr 
 		{
 				position: relative;
-				top: 20px;
+				top: 2px;
 				border: none;
 				height: 2px;
 				background: #d737a5;
-				margin-bottom: 50px;
+				margin-bottom: 20px;
 		}
         .float-container {
 
-        padding: 0px;
+        padding: 0%;
         }
 
         .float-child {
         width: 100%;
         float: left;
-        padding: 20px;
+        padding: 0%;
 
-        font-size: 18px;
+        font-size: 2vw;
 
         }  
         #file-content{
@@ -63,13 +64,13 @@
             background-color:white;
             color: rgb(181,3,70);
             cursor: pointer;
-            padding: 18px;
+            padding: 0px;
             width: 90%;
             border-color: rgb(181,3,70);
             border-width: 1px;
             text-align: left;
             outline: none;
-            font-size: 20px;
+            font-size: 2vw;
             margin-left: 5%;
             margin-right: 5%;
         }
@@ -100,7 +101,7 @@
             background-color: white;
             border: black;
             color: black;
-            font-size: 18px;
+            font-size: 2vw;
             
         }
         #button {
@@ -158,15 +159,20 @@
             .patternsearch{
                 text-align: left;
                 margin-top: 0;
-                margin-right: 97%;
-                font-size: 14px;
+                margin-right: 98%;
+                font-size: 2vw;
+                width: 2%; 
+                border: 1px solid #000000
 
             }
             .restrictionresult{
                 text-align: left;
+                word-wrap: break-word;
                 margin-top: 0;
-                margin-right: 97%;
-                font-size: 14px;
+                margin-right: 98%;
+                font-size: 2vw;
+                width: 2%; 
+                border: 1px solid #000000
 
             }
             div.at-container {
@@ -176,15 +182,27 @@
 
 	}
 	.at-item {
-		color: #4f2037; font-weight:bold; font-size:45px;;
+		color: #4f2037; font-weight:bold; font-size:4vw;
 		
         justify-content: center;
-		 text-decoration-color:#4f2037;  
-		 position: relative;
-         align-items: center;
-         text-align: center;
+		text-decoration-color:#4f2037;  
+		position: relative;
+        align-items: center;         	
          margin-left: 5%;
 	}
+    textarea{
+			
+			font-size: 1.5vw;
+
+		}
+        h1{
+			font-size: 3vw;
+		}
+        h3{
+            font-size: 2vw;
+            font-weight: lighter;
+        }
+		
     </style>
 <head>
 
@@ -198,7 +216,7 @@
 
 
     <div class='at-container'>
-        <img src="images/logo.png" width="300" height="100" >
+        <img src="images/logo.png" width="15%" height="1%" >
         &nbsp;&nbsp;&nbsp;&nbsp;
         <div class='at-item' >Finding Repetition in Sequence</div>
     </div>
@@ -207,14 +225,14 @@
 <br>
     <div id="testbutton" align="center">
         <input type="file" id="actual-btn" accept=".txt" hidden/>
-        <label for="actual-btn" style="cursor: pointer;">Select DNA sequence:</label> 
-        &nbsp;<i class="fa fa-hand-o-left" style="font-size:25px;color:#4f2037;"></i></i> Click here to choose a DNA FASTA file <br><br>
-
+        <label for="actual-btn" style="cursor: pointer;font-size: 1.5vw;">Select DNA sequence:</label> 
+        &nbsp;<i class="fa fa-hand-o-left" style="font-size:2vw;color:#4f2037;"> Click here to choose a DNA FASTA file </i><br><br>
+        <a href="Dengue virus 2 gene_fasta.txt" download="sample_fasta.txt;"style="font-size: 2vw;">Download a Sample FASTA file</a>
+        <br>
         <br>
         <textarea id="disp" cols="50" rows="10">
         </textarea><br>
-        <a href="Dengue virus 2 gene_fasta.txt" download="sample_fasta.txt">Download a Sample FASTA file</a>
-        <br>
+        
     </div>
     <hr />
     
@@ -233,7 +251,7 @@
         </div>
 
 
-        <p id="demo"  style= "margin-left: 5%;color:rgb(181,3,70);word-wrap:break-word; display:inline-block;font-size:22px;"></p>
+        <p id="demo"  style= "margin-left: 2.5%;color:rgb(181,3,70);word-wrap:break-word; display:inline-block;font-size:2vw;"></p>
 
 	<script>
 
@@ -255,8 +273,8 @@
  			};
  			reader2.onerror = (e) => alert(e.target.error.name);
    	 		reader2.readAsText(file);
-            document.getElementById("wordcount").insertAdjacentHTML('beforeend', "<label style=\"background-color: white ; color: #802652; font-weight: bold;\" >Select the word size:</label><br><br> <input type=\"radio\" id=\"mono\" name=\"required\" value=\"mono\"onclick=\"Wordcount()\">Mono-Nucleotide &nbsp;&nbsp;&nbsp;&nbsp;	<input type=\"radio\" id=\"di\" name=\"required\" value=\"di\"onclick=\"Wordcount()\">Di-Nucleotide &nbsp;&nbsp;&nbsp;&nbsp;<input type=\"radio\" id=\"tri\" name=\"required\" value=\"tri\"onclick=\"Wordcount()\">Tri-Nucleotide &nbsp;&nbsp;&nbsp;&nbsp; <input type=\"radio\" id=\"more\" name=\"required\" value=\"more\" onclick=\"Wordcount()\">More &nbsp;&nbsp;&nbsp;&nbsp;<br><br><div id=\"count\" style=\"display:none\"><label for=\"word_count\"style=\"background-color: white ; color: #802652; font-weight: bold;\">Enter a word size:</label>&nbsp;&nbsp;&nbsp;<input type=\"text\" id=\"word_count\" /></div>");
-            document.getElementById("restriction").insertAdjacentHTML('beforeend', "<hr/><br><label for=\"restriction1\" style=\"background-color: white ; color: #802652; font-weight: bold;\">Restriction enzyme site:</label><br><br><input type=\"radio\" id=\"ecorI\" name=\"restriction1\" value=\"ecorI\">EcoRI ('GAATTC') &nbsp;&nbsp;&nbsp;&nbsp;<input type=\"radio\" id=\"hindIII\" name=\"restriction1\" value=\"hindIII\">Hind III ('AAGCTT') &nbsp;&nbsp;&nbsp;&nbsp;<input type=\"radio\" id=\"pvuI\" name=\"restriction1\" value=\"pvuI\">PvuI ('CGATCG') &nbsp;&nbsp;&nbsp;&nbsp;	<input type=\"radio\" id=\"bamhI\" name=\"restriction1\" value=\"bamhI\">BamHI ('GGATCC') &nbsp;&nbsp;&nbsp;&nbsp;<br><br><hr/><br><label id=\"ws\"style=\"background-color: white ; color: #802652; font-weight: bold;\">Enter the word to search:</label><br><br><input type=\"text\" id=\"word_search\" <br><br><hr/><p><input type=\"button\"  onclick=\"myFunction()\" id=\"Submit\" value=\"Submit\" hidden> <label for=\"Submit\"> Submit</label> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href=\"index.html\"><input type=\"button\" id=\"Reset\" hidden><label for=\"Reset\">Reset</label></a></p>");
+            document.getElementById("wordcount").insertAdjacentHTML('beforeend', "<label style=\"background-color: white ; color: #802652; font-weight: bold;\" >Select the word size:</label><br><br> <input type=\"radio\" id=\"mono\" name=\"required\" value=\"mono\" style=\"height:1vw; width:1vw;\"onclick=\"Wordcount()\">Mono-Nucleotide &nbsp;&nbsp;&nbsp;&nbsp;	<input type=\"radio\" id=\"di\" name=\"required\" value=\"di\" style=\"height:1vw; width:1vw;\" onclick=\"Wordcount()\">Di-Nucleotide &nbsp;&nbsp;&nbsp;&nbsp;<input type=\"radio\" id=\"tri\" name=\"required\" value=\"tri\" style=\"height:1vw; width:1vw;\" onclick=\"Wordcount()\">Tri-Nucleotide &nbsp;&nbsp;&nbsp;&nbsp; <input type=\"radio\" id=\"more\" name=\"required\" value=\"more\" style=\"height:1vw; width:1vw;\" onclick=\"Wordcount()\">More &nbsp;&nbsp;&nbsp;&nbsp;<br><br><div id=\"count\" style=\"display:none\"><label for=\"word_count\"style=\"background-color: white ; color: #802652; font-weight: bold;\">Enter a word size:</label>&nbsp;&nbsp;&nbsp;<input type=\"text\" id=\"word_count\" /></div>");
+            document.getElementById("restriction").insertAdjacentHTML('beforeend', "<hr/><br><label for=\"restriction1\" style=\"background-color: white ; color: #802652; font-weight: bold;\">Restriction enzyme site:</label><br><br><input type=\"radio\" id=\"ecorI\" name=\"restriction1\" value=\"ecorI\" style=\"height:1vw; width:1vw;\">EcoRI ('GAATTC') &nbsp;&nbsp;&nbsp;&nbsp;<input type=\"radio\" id=\"hindIII\" name=\"restriction1\" value=\"hindIII\" style=\"height:1vw; width:1vw;\">Hind III ('AAGCTT') &nbsp;&nbsp;&nbsp;&nbsp;<input type=\"radio\" id=\"pvuI\" name=\"restriction1\" value=\"pvuI\" style=\"height:1vw; width:1vw;\">PvuI ('CGATCG') &nbsp;&nbsp;&nbsp;&nbsp;	<input type=\"radio\" id=\"bamhI\" name=\"restriction1\" value=\"bamhI\" style=\"height:1vw; width:1vw;\">BamHI ('GGATCC') &nbsp;&nbsp;&nbsp;&nbsp;<br><br><hr/><br><label id=\"ws\"style=\"background-color: white ; color: #802652; font-weight: bold;\">Enter the word to search:</label><br><br><input type=\"text\" id=\"word_search\" <br><br><hr/><p><input type=\"button\"  onclick=\"myFunction()\" id=\"Submit\" value=\"Submit\" hidden> <label for=\"Submit\"> Submit</label> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href=\"index.html\"><input type=\"button\" id=\"Reset\" hidden><label for=\"Reset\">Reset</label></a></p>");
             //input.removeEventListener("change");
             document.getElementById("actual-btn").disabled = true;
 		});
@@ -287,19 +305,19 @@
             var wc=[];
             if(document.getElementById("mono").checked){
                 wc=1;
-                document.getElementById("demo").insertAdjacentHTML('beforeend', "<br> <br> Mono-Nucleotides in this sequence: <br><br>" );
+                document.getElementById("demo").insertAdjacentHTML('beforeend', "<h3>Mono-Nucleotides in this sequence: </h3>" );
             }
             else if(document.getElementById("di").checked){
                 wc=2;
-                document.getElementById("demo").insertAdjacentHTML('beforeend', "<br> <br> Di-Nucleotides in this sequence:<br><br>"); 
+                document.getElementById("demo").insertAdjacentHTML('beforeend', "<h3>Di-Nucleotides in this sequence: <\h3>"); 
             }
             else if(document.getElementById("tri").checked){
                 wc=3;
-                document.getElementById("demo").insertAdjacentHTML('beforeend', "<br> <br> Tri-Nucleotides in this sequence:<br><br>"); 
+                document.getElementById("demo").insertAdjacentHTML('beforeend', " <h3>Tri-Nucleotides in this sequence:<\h3>"); 
             }
             else if(document.getElementById("more").checked){
                 wc=document.getElementById("word_count").value;
-                document.getElementById("demo").insertAdjacentHTML('beforeend',"<br> <br> Nucleotides of word size "+wc+" in this sequence:<br><br>");
+                document.getElementById("demo").insertAdjacentHTML('beforeend'," <h3>Nucleotides of word size "+wc+" in this sequence:<\h3>");
             }
             else{
                 wc=0;
@@ -321,7 +339,7 @@
                     }
                 });
                 var count_w=[];
-                document.getElementById("demo").insertAdjacentHTML('beforeend',"<textarea id=\"result1\"rows=\"10\"></textarea><br>");
+                document.getElementById("demo").insertAdjacentHTML('beforeend',"<textarea id=\"result1\" cols=\"20\"rows=\"10\"></textarea><br>");
                 for(var x=0;x<unique_word.length; x++){
                     if(unique_word[x].length == wc){
                         count_w[x] = NEW_DNA.match(new RegExp(unique_word[x],"g")).length;
@@ -374,7 +392,7 @@
                     var rest_count= newDNA.match(new RegExp(rest, "g")).length;
 
 
-                    document.getElementById("demo").insertAdjacentHTML('beforeend',"<br><br>The total number of "+enz+" ("+rest+") restriction site in this sequence is  "+rest_count+"<br>");	
+                    document.getElementById("demo").insertAdjacentHTML('beforeend',"<h3>The total number of "+enz+" ("+rest+") restriction site in this sequence is  "+rest_count+"<\h3>");	
 
                     document.getElementById("demo").insertAdjacentHTML('beforeend',"<div class=\"restrictionresult\" id=\"restrictionresult\"></div>")
 
@@ -384,7 +402,7 @@
             }                
             else{
 
-                    document.getElementById("demo").insertAdjacentHTML('beforeend',"<br> The Restriction site "+enz+" is not present in this sequence.<br><br><br>");
+                    document.getElementById("demo").insertAdjacentHTML('beforeend'," <h3>The Restriction site "+enz+" is not present in this sequence.<\h3>");
             }
         }
 
@@ -401,13 +419,13 @@
                     var col_change1= newDNA.replace(new RegExp(ws, "g"),"<mark>"+ws+"</mark>");
                     var search_count= newDNA.match(new RegExp(ws, "g")).length;
 
-                    document.getElementById("demo").insertAdjacentHTML('beforeend',"The word "+ws+" is present "+search_count+" number of times");
+                    document.getElementById("demo").insertAdjacentHTML('beforeend',"<h3>The word "+ws+" is present "+search_count+" number of times<\h3>");
                     document.getElementById("demo").insertAdjacentHTML('beforeend',"<div class=\"patternsearch\" id=\"patternsearch\"></div>")
 
                     document.getElementById("patternsearch").insertAdjacentHTML('beforeend',"<br>"+col_change1+"<br><br>");
                 }
                 else{
-                    document.getElementById("demo").insertAdjacentHTML('beforeend',ws+" is not present in the sequence");
+                    document.getElementById("demo").insertAdjacentHTML('beforeend',"<h3>"+ws+" is not present in the sequence<\h3>");
                 }
             }
 
